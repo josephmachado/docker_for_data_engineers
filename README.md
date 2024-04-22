@@ -1,5 +1,7 @@
 # Docker for Data Engineers
 
+Code for blog at: https://www.startdataengineering.com/post/docker-for-de/
+
 In order to run the code in this post you'll need to install the following:
  
 1. [git version >= 2.37.1](https://github.com/git-guides/install-git)
@@ -19,6 +21,10 @@ docker ps # see list of running docker containers and their settings
 docker compose down
 ```
 
+# Testing PySpark Applications
+
+Code for blog at: https://www.startdataengineering.com/post/test-pyspark/
+
 ## Create fake upstream data
 
 In our upstream (postgres db), we can create fake data with the [datagen.py](./capstone/upstream_datagen/datagen.py) script, as shown:
@@ -36,5 +42,5 @@ docker exec spark-master spark-submit --master spark://spark-master:7077 --deplo
 ## Run tests
 
 ```bash
-docker exec spark-master bash -c 'python3 -m pytest --log-cli-level info -p no:warnings -v /opt/spark.work-dir/tests'
+docker exec spark-master bash -c 'python3 -m pytest --log-cli-level info -p no:warnings -v /opt/spark/work-dir/etl/tests'
 ```
