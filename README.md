@@ -12,4 +12,9 @@ All the commands shown below are to be run via the terminal (use the Ubuntu term
 ```bash
 git clone https://github.com/josephmachado/docker_for_data_engineers.git
 cd efficient_data_processing_spark
+# start containers
+docker compose up --build -d --scale spark-worker=2
+docker ps # see list of running docker containers and their settings
+# stop containers
+docker compose down
 ```
