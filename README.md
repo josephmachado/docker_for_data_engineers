@@ -10,6 +10,6 @@ In order to run the code in this post you'll need to install the following:
 All the commands shown below are to be run via the terminal (use the Ubuntu terminal for WSL users).
 
 ```bash
-git clone https://github.com/josephmachado/efficient_data_processing_spark.git
+git clone https://github.com/josephmachado/docker_for_data_engineers.git
 cd efficient_data_processing_spark
 ```
