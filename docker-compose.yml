@@ -15,6 +15,7 @@ services:
     volumes:
       - ./capstone:/opt/spark/work-dir/capstone
       - ./data-processing-spark:/opt/spark/work-dir/data-processing-spark
+      - ./etl:/opt/spark/work-dir/etl
       - spark-logs:/opt/spark/spark-events
       - tpch-data:/opt/spark/tpch-dbgen
     environment:
@@ -48,6 +49,7 @@ services:
       - ./data-processing-spark:/opt/spark/work-dir/data-processing-spark
       - spark-logs:/opt/spark/spark-events
       - tpch-data:/opt/spark/tpch-dbgen
+      - ./etl:/opt/spark/work-dir/etl
     env_file:
       - .env.spark
     environment:

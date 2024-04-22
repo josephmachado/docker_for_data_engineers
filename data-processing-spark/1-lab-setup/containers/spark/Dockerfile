@@ -34,6 +34,8 @@ RUN chmod u+x /opt/spark/sbin/* && \
     chmod u+x /opt/spark/bin/*
 
 ENV PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
+ENV PYTHONPATH=/opt/spark/work-dir/capstone/:$PYTHONPATH
+ENV PYTHONPATH=/opt/spark/work-dir/etl/:$PYTHONPATH
 
 COPY entrypoint.sh .
 

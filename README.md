@@ -18,3 +18,23 @@ docker ps # see list of running docker containers and their settings
 # stop containers
 docker compose down
 ```
+
+## Create fake upstream data
+
+In our upstream (postgres db), we can create fake data with the [datagen.py](./capstone/upstream_datagen/datagen.py) script, as shown:
+
+```bash
+docker exec spark-master bash -c "python3 /opt/spark/work-dir/capstone/upstream_datagen/datagen.py"
+```
+
+## Run simple etl
+
+```bash
+docker exec spark-master spark-submit --master spark://spark-master:7077 --deploy-mode client /opt/spark/work-dir/etl/simple_etl.py
+```
+
+## Run tests
+
+```bash
+docker exec spark-master bash -c 'python3 -m pytest --log-cli-level info -p no:warnings -v /opt/spark.work-dir/tests'
+```
