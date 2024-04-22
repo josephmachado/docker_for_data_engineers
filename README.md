@@ -21,6 +21,21 @@ docker ps # see list of running docker containers and their settings
 docker compose down
 ```
 
+Using the exec command, you can submit commands to be run in a specific container. For example, we can use the following to open a bash terminal in our `spark-master` container:
+
+```bash
+docker exec -ti spark-master bash
+# You will be in the master container bash shell
+exit # exit the container
+```
+
+Note that the `-ti` indicates that this will be run in an interactive mode. As shown below, we can run a command without interactive mode and get an output.
+
+```bash
+docker exec spark-master echo hello
+# prints hello
+```
+
 # Testing PySpark Applications
 
 Code for blog at: https://www.startdataengineering.com/post/test-pyspark/
