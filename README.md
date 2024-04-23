@@ -36,6 +36,18 @@ docker exec spark-master echo hello
 # prints hello
 ```
 
+## Running a Jupyter notebook
+
+Use the following command to start a jupyter server:
+
+```bash
+docker exec spark-master bash -c "jupyter notebook --ip=0.0.0.0 --port=3000 --allow-root"
+```
+
+You will see a link displayed with the format `http://127.0.0.1:3000/?token=your-token`, click it to open the jupyter notebook on your browser. You can use [local jupyter notebook sample to get started](./sample_jupyter_spark_nb.ipynb).
+
+You can stop the jupyter server with ctrl + c.
+
 # Testing PySpark Applications
 
 Code for blog at: https://www.startdataengineering.com/post/test-pyspark/
