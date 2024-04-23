@@ -29,7 +29,7 @@ def load_seller_data(clean_seller_data):
     return clean_seller_data.collect()
 
 def run_code(spark):
-    load_seller_data(transform_seller_data(get_upstream_seller_data(spark)))
+    return load_seller_data(transform_seller_data(get_upstream_seller_data(spark)))
 
 if __name__ == "__main__":
     # Create a spark session
