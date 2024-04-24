@@ -50,11 +50,11 @@ You can stop the jupyter server with ctrl + c.
 
 ## Running on GitHub codespaces
 
-**Important**❗ Make sure you shut down your codespace instance, they can cost money! (pricing ref](https://github.com/features/codespaces)
+**Important**❗ Make sure you shut down your codespace instance, they can cost money !(pricing ref](https://github.com/features/codespaces)
 
 You can run our data infra in a GitHub Codespace container as shown below.
 
-1. Clone this repo, and click on `Code` -> `Create codespace on main` in the GitHub repo page.
+1. Clone this repo, and click on `Code` -> `Codespaces` -> `Create codespace on main` in the GitHub repo page.
 2. In the codespace start the docker containers with `docker compose up --build -d` note that we skip the num workers, since we don't want to tax the codespace VM.
 3. Run commands as you would in your terminal.
 
