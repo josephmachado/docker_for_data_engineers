@@ -54,12 +54,12 @@ You can stop the jupyter server with ctrl + c.
 
 You can run our data infra in a GitHub Codespace container as shown below.
 
-1. Clone this repo, and click on `Code` -> `New Codespace` in the GitHub repo page.
+1. Clone this repo, and click on `Code` -> `Create codespace on main` in the GitHub repo page.
 2. In the codespace start the docker containers with `docker compose up --build -d` note that we skip the num workers, since we don't want to tax the codespace VM.
 3. Run commands as you would in your terminal.
 
-![Start CodeSpace](./assets/cs-1.png)
-![Run ETL on CodeSpace](./assets/cs-2.png)
+![Start codespace](./assets/cs-1.png)
+![Run ETL on codespace](./assets/cs-2.png)
 
 **Note** If you want to use Jupyter notebook via codespace forward the port 3000 following the steps [here](https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace#forwarding-a-port)
    
