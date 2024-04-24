@@ -50,6 +50,8 @@ You can stop the jupyter server with ctrl + c.
 
 ## Running on GitHub codespaces
 
+**Important**❗ Make sure you shut down your codespace instance, they can cost money! (pricing ref](https://github.com/features/codespaces)
+
 You can run our data infra in a GitHub Codespace container as shown below.
 
 1. Clone this repo, and click on `Code` -> `New Codespace` in the GitHub repo page.
