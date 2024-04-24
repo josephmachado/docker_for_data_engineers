@@ -48,6 +48,19 @@ You will see a link displayed with the format `http://127.0.0.1:3000/?token=your
 
 You can stop the jupyter server with ctrl + c.
 
+## Running on GitHub codespaces
+
+You can run our data infra in a GitHub Codespace container as shown below.
+
+1. Clone this repo, and click on `Code` -> `New Codespace` in the GitHub repo page.
+2. In the codespace start the docker containers with `docker compose up --build -d` note that we skip the num workers, since we don't want to tax the codespace VM.
+3. Run commands as you would in your terminal.
+
+![Start CodeSpace](./assets/cs-1.png)
+![Run ETL on CodeSpace](./assets/cs-2.png)
+
+**Note** If you want to use Jupyter notebook via codespace forward the port 3000 following the steps [here](https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace#forwarding-a-port)
+   
 # Testing PySpark Applications
 
 Code for blog at: https://www.startdataengineering.com/post/test-pyspark/
