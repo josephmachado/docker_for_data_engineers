@@ -2,7 +2,7 @@ version: '3'
 
 services:
   spark-master:
-    image: spark-image 
+    image: spark
     container_name: spark-master
     entrypoint: ['./entrypoint.sh', 'master']
     build:
@@ -31,7 +31,7 @@ services:
   
   spark-history-server:
     container_name: spark-history
-    image: spark-image
+    image: spark
     entrypoint: ['./entrypoint.sh', 'history']
     depends_on:
       - spark-master
@@ -43,7 +43,7 @@ services:
       - '18080:18080'
   
   spark-worker:
-    image: spark-image
+    image: spark
     entrypoint: ['./entrypoint.sh', 'worker']
     volumes:
       - ./capstone:/opt/spark/work-dir/capstone
