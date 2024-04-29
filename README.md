@@ -14,7 +14,7 @@ All the commands shown below are to be run via the terminal (use the Ubuntu term
 ```bash
 git clone https://github.com/josephmachado/docker_for_data_engineers.git
 cd docker_for_data_engineers
-# Build our custome image based off of our local Dockerfile
+# Build our custom image based off of our local Dockerfile
 docker compose build spark-master
 # start containers
 docker compose up --build -d --scale spark-worker=2
